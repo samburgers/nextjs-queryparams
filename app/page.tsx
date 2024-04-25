@@ -7,15 +7,13 @@ export default async function Page({
 }) {
   return (
     <div className="container mx-auto p-8 space-y-8">
-      <nav className="flex gap-2">
-        <Link href="/">None</Link>
-        <Link href="?foo=bar1">bar1</Link>
-        <Link href="?foo=bar2">bar2</Link>
-        <Link href="?foo=bar3">bar3</Link>
+      <h1 className="font-bold">SearchParams</h1>
+      <nav className="flex gap-4 underline">
+        <Link href="?foo=bar1">1: Click here and refresh page (?foo=bar1)</Link>
+        <Link href="?foo=bar2">2. Click here (?foo=bar2)</Link>
+        <Link href="/">3. Click here wtf (/)</Link>
       </nav>
-      <div>
-        <pre className="bg-gray-100 p-8">{JSON.stringify(searchParams)}</pre>
-      </div>
+      <pre className="bg-gray-100 p-8">{JSON.stringify(searchParams)}</pre>
     </div>
   );
 }
